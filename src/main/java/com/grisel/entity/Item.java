@@ -11,7 +11,7 @@ public class Item {
 	private String id;
 	@Indexed(direction = IndexDirection.DESCENDING)
 	private String name;
-	private int chapterNumber;
+	private double chapterNumber;
 	
 	public Item() {
 		super();
@@ -35,10 +35,10 @@ public class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getChapterNumber() {
+	public double getChapterNumber() {
 		return chapterNumber;
 	}
-	public void setChapterNumber(int chapterNumber) {
+	public void setChapterNumber(double chapterNumber) {
 		this.chapterNumber = chapterNumber;
 	}
 	

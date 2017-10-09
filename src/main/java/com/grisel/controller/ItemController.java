@@ -2,11 +2,11 @@ package com.grisel.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +14,8 @@ import com.grisel.entity.Item;
 import com.grisel.repository.ItemRepository;
 
 @RestController
-@RequestMapping("/items")
+@CrossOrigin(origins = "*")
+@RequestMapping("/api/items")
 public class ItemController {
 	private ItemRepository itemRepo;
 
@@ -24,12 +25,11 @@ public class ItemController {
 	}
 	
 	@GetMapping
-	public List<Item> getAll(){
+	public String getAll(){
 		List<Item> items = (List<Item>) this.itemRepo.findAll();
 		
-		return items;
+		return items.toString();
 	}
-	
 	
 	@PostMapping
 	public void saveOrUpdate(@RequestBody Item item) {
