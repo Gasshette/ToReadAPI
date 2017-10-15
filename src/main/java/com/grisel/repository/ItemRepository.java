@@ -1,11 +1,11 @@
 package com.grisel.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.grisel.entity.Item;
 
-@Repository
+@RepositoryRestResource
 public interface ItemRepository extends PagingAndSortingRepository<Item, String> {
 
 }
