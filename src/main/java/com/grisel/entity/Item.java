@@ -12,6 +12,7 @@ public class Item {
 	@Indexed(direction = IndexDirection.DESCENDING)
 	private String name;
 	private double chapterNumber;
+	private double step;
 	
 	public Item() {
 		super();
@@ -40,6 +41,14 @@ public class Item {
 	}
 	public void setChapterNumber(double chapterNumber) {
 		this.chapterNumber = chapterNumber;
+	}
+
+	public double getStep() {
+		return step;
+	}
+
+	public void setStep(double step) {
+		this.step = step;
 	}
 	
 	

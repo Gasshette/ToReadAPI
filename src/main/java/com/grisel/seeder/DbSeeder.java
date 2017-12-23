@@ -20,15 +20,15 @@ public class DbSeeder implements CommandLineRunner {
 
 	@Override
 	public void run(String... arg0) throws Exception {
-		Item BokuNoHeroAcademia = new Item("Boku No Hero Academia", 153);
-		Item WuDongKianKung = new Item("Wu Dong Kian Kung", 56);
+		//Item BokuNoHeroAcademia = new Item("Boku No Hero Academia", 153);
+		//Item WuDongKianKung = new Item("Wu Dong Kian Kung", 56);
 		
 		//Drop all items
-		this.itemRepo.deleteAll();
+		//this.itemRepo.deleteAll();
 		
-		List<Item> itemList = Arrays.asList(BokuNoHeroAcademia, WuDongKianKung);
+		//List<Item> itemList = Arrays.asList(BokuNoHeroAcademia, WuDongKianKung);
 		
-		this.itemRepo.save(itemList);
+		//this.itemRepo.save(itemList);
 		
 	}
 
